@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Native Demo Suite" parallel="tests" thread-count="10" verbose="0">
+
+	<test name="Window10 Chrome test" parallel="methods" enabled="true">
+		<parameter name="platformName" value="windows 10"></parameter>
+		<parameter name="browserName" value="Chrome"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="sauce_tags" value="sauceDemo Web javaTest Visual"></parameter>
+		<parameter name="visual_viewportSize" value="1280x1024"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoSwagLabsVisualTest"/>
+		</classes>
+	</test>
+
+	<test name="Mac Safari test" parallel="methods" enabled="false">
+		<parameter name="platformName" value="macOS 10.15"></parameter>
+		<parameter name="browserName" value="Safari"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="sauce_tags" value="sauceDemo Web javaTest"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoSwagLabsTest"/>
+		</classes>
+	</test>
+
+	<test name="Mac Firefox test" parallel="methods" enabled="false">
+		<parameter name="platformName" value="macOS 11.00"></parameter>
+		<parameter name="browserName" value="Firefox"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="sauce_tags" value="sauceDemo Web javaTest"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoSwagLabsTest"/>
+		</classes>
+	</test>
+
+</suite>

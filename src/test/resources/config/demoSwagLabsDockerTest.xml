@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Native Demo Suite" verbose="0">
+
+	<test name="Docker Chrome test" enabled="true">
+		<classes>
+			<class name="com.saucelabs.tests.DemoSwagLabsTest"/>
+		</classes>
+	</test>
+
+</suite>
