@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 
 public class HeaderPage extends BasePage {
 
-    private final By shoppingCartLocator = By.className("shopping_cart_link");
+//    private final By shoppingCartLocator = By.className("shopping_cart_link");
+    private final By shoppingCartLocator = By.cssSelector(".shopping_cart_link");
 
     public HeaderPage(WebDriver driver) {
         super(driver);

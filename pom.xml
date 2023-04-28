@@ -14,9 +14,9 @@
         <testngXmlFile>demoSwagLabsTest.xml</testngXmlFile>
         <testng.version>7.4.0</testng.version>
         <commons-logging.version>1.2</commons-logging.version>
-        <selenium.version>4.1.1</selenium.version>
+        <selenium.version>4.9.0</selenium.version>
         <maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
-        <appium.version>7.5.1</appium.version>
+        <appium.version>8.3.0</appium.version>
     </properties>
 
     <dependencies>
@@ -53,11 +53,11 @@
             <version>3.21.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>${appium.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.appium</groupId>-->
+<!--            <artifactId>java-client</artifactId>-->
+<!--            <version>${appium.version}</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.json</groupId>
@@ -70,6 +70,13 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.deque.html.axe-core</groupId>
+            <artifactId>selenium</artifactId>
+            <version>4.6.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

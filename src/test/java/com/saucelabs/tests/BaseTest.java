@@ -14,6 +14,7 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
+import java.util.logging.Level;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -96,13 +97,16 @@ public class BaseTest {
             caps.setCapability("sauce:options", sauceOptions);
 
             if (region.equalsIgnoreCase("visual-us")) {
-                sauceVisual.put("apiKey", System.getenv("SCREENER_API_KEY"));
-                String projectName = methodName + "-" + caps.getPlatformName() + "-" + caps.getBrowserName() + "-" + caps.getBrowserVersion();
-                sauceVisual.put("projectName", projectName);
+//                sauceVisual.put("apiKey", System.getenv("SCREENER_API_KEY"));
+                sauceVisual.put("apiKey", "4f07f4cb-ab09-4b66-aa14-4947f5a7aaaf");
+
+//                String projectName = methodName + "-" + caps.getPlatformName() + "-" + caps.getBrowserName() + "-" + caps.getBrowserVersion();
+//                sauceVisual.put("projectName", projectName);
                 caps.setCapability("sauce:visual", sauceVisual);
             }
 
             try {
+//                new SeleniumLogger().setLevel(Level.FINE)
                 driver.set(new RemoteWebDriver(url, caps));
             } catch (Exception e) {
                 System.out.println("*** Problem to create the remote web driver " + e.getMessage());
