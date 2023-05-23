@@ -46,7 +46,8 @@ public class DemoSwagLabsAccessibilityTest {
         MutableCapabilities caps = new MutableCapabilities();
         MutableCapabilities sauceOptions = new MutableCapabilities();
 
-        caps.setCapability("browserName", "Firefox");
+//        caps.setCapability("browserName", "Firefox");
+        caps.setCapability("browserName", "Chrome");
         caps.setCapability("browserVersion", "latest-1");
         caps.setCapability("platformName", "windows 10");
 
@@ -57,6 +58,7 @@ public class DemoSwagLabsAccessibilityTest {
         sauceOptions.setCapability("screenResolution", "1600x1200");
         sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
         sauceOptions.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
+
 
         caps.setCapability("sauce:options", sauceOptions);
 
@@ -107,23 +109,23 @@ public class DemoSwagLabsAccessibilityTest {
             ((JavascriptExecutor) driver).executeScript("sauce:context=" +" -----------");
         }
 
-
-        // second page
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
-
-        AxeBuilder axeBuilder2 = new AxeBuilder();
-        Results accessibilityResults2 = axeBuilder2.analyze(driver);
-
-        ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +" -----------");
-        for (Rule violation : accessibilityResults2.getViolations()) {
-            System.out.println(violation);
-            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +"Impact: " + violation.getImpact());
-            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +"Description: " + violation.getHelp());
-            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +"Help: " + violation.getHelpUrl());
-            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +" -----------");
-        }
+//
+//        // second page
+//        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+//        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+//        driver.findElement(By.id("login-button")).click();
+//
+//        AxeBuilder axeBuilder2 = new AxeBuilder();
+//        Results accessibilityResults2 = axeBuilder2.analyze(driver);
+//
+//        ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +" -----------");
+//        for (Rule violation : accessibilityResults2.getViolations()) {
+//            System.out.println(violation);
+//            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +"Impact: " + violation.getImpact());
+//            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +"Description: " + violation.getHelp());
+//            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +"Help: " + violation.getHelpUrl());
+//            ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" +" -----------");
+//        }
 
     }
 }

@@ -11,24 +11,24 @@
 		</classes>
 	</test>
 
-<!--	<test name="Mac Safari test" parallel="methods" enabled="true">-->
-<!--		<parameter name="platformName" value="macOS 10.15"></parameter>-->
-<!--		<parameter name="browserName" value="Safari"></parameter>-->
-<!--		<parameter name="browserVersion" value="latest"></parameter>-->
-<!--		<parameter name="sauce_tags" value="sauceDemo Web javaTest"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="com.saucelabs.tests.DemoSwagLabsTest"/>-->
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="Mac Safari test" parallel="methods" enabled="true">
+		<parameter name="platformName" value="macOS 10.15"></parameter>
+		<parameter name="browserName" value="Safari"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="sauce_tags" value="sauceDemo Web javaTest"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoSwagLabsTest"/>
+		</classes>
+	</test>
 
-<!--	<test name="Mac Firefox test" parallel="methods" enabled="true">-->
-<!--		<parameter name="platformName" value="macOS 11.00"></parameter>-->
-<!--		<parameter name="browserName" value="Firefox"></parameter>-->
-<!--		<parameter name="browserVersion" value="latest"></parameter>-->
-<!--		<parameter name="sauce_tags" value="sauceDemo Web javaTest"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="com.saucelabs.tests.DemoSwagLabsTest"/>-->
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="Mac Firefox test" parallel="methods" enabled="true">
+		<parameter name="platformName" value="macOS 11.00"></parameter>
+		<parameter name="browserName" value="Firefox"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="sauce_tags" value="sauceDemo Web javaTest"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoSwagLabsTest"/>
+		</classes>
+	</test>
 
 </suite>
